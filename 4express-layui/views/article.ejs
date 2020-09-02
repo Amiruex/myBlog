@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="shortcut icon" href="/images/mao.ico">
+</head>
+
+<body>
+    <header id="header">
+        <div class="topbar visible-md visible-lg visible-sm navbar-fixed-top">
+            <div class="container mycon">
+                <div class="row">
+                    <div class="col-md-2 col-sm-2 text-center">
+                        <a href="#" class="mobile-link">
+                            <i class="icon-mobilephone"></i>
+                            <span>手机关注</span>
+                            <i class="glyphicon glyphicon-chevron-down"></i>
+                            <!-- <img src="img/c_06.jpg" height="136" width="120" alt="扫一扫"> -->
+                        </a>
+                    </div>
+                    <div class="col-md-5 col-sm-4 text-center">
+                        <div class="input-group my-search">
+                            <input type="text" class="form-control search-bar" placeholder="Search for...">
+                            <span class="input-group-btn">
+                              <button class="btn btn-default" type="button">Go!</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-5 col-md-offset-1 text-center">
+                        <a href="javascript:;" class="btn btn-info btn-md my-button">
+                            <span>发布动态</span>
+                            <i class="glyphicon glyphicon-send"></i>
+                        </a>
+                        <a href="javascript:;" class="btn btn-md my-button" data-toggle="modal" data-target=".bs-example-modal-sm">快速注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">用户登录</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="username" class="control-label">账号:</label>
+                                <input type="text" class="form-control" id="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="userpwd" class="control-label">密码:</label>
+                                <input type="password" class="form-control" id="userpwd">
+                            </div>
+                            <div class="form-group text-center">
+                                <input class="btn my-button" type="button" value="登录注册">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <p class="inform">注册登录即表示同意<span class='text-info'> 用户协议、隐私政策</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-default navbar-fixed-top my-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_list" aria-expanded="false">
+                      <span class="sr-only">切换菜单</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <i class="icon-icon">Meow</i>
+                        <i class="icon-cat"></i>
+                    </a>
+                </div>
+                <div id="nav_list" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="http://localhost:8080/Home">首页</a></li>
+                        <li><a href="http://localhost:8080/Recommend">推荐</a></li>
+                        <li><a href="#">平台介绍</a></li>
+                        <li><a href="#">xx专区</a></li>
+                        <li><a href="#">最新动态</a></li>
+                        <li><a href="./introduction.html">关于蜜涡</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right hidden-sm">
+                        <li><a href="#">个人中心</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <section class="container">
+        <div class="row" id="recommend">
+            <div class="col-md-9 col-sm-8">
+                <div>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="wrap">
+                            <h1>
+                                <%= list[0].title%>
+                            </h1>
+                            <div class="brief">
+                                <span class="name">小蝴蝶</span>
+                                <span class="date"><%= list[0].nowdate %></span>
+                            </div>
+                            <div>
+                                <%- list[0].content %>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 hidden-xs">
+                <div class="login">
+                    <h4>蜜涡-meow</h4>
+                    <mark>一个友好的网站</mark>
+                    <form>
+                        <div class="form-group text-center">
+                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                        </div>
+                        <div class="form-group text-center">
+                            <label class="sr-only" for="exampleInputPassword3">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                            <input type="checkbox"> Remember me
+                          </label>
+                        </div>
+                        <button type="submit" class="btn btn-default">Sign in</button>
+                    </form>
+                    <p class="inform">注册登录即表示<br>同意<span class='text-info'> 用户协议、隐私政策</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="foot-img">
+            <img src="/images/cats.png" alt="">
+        </div>
+        <div class="container">
+            <div class="row footer-top">
+                <div class="col-md-6 col-lg-6">
+                    <h4>
+                        <img class="img-responsive" src="/images/w.PNG">
+                    </h4>
+                    <p>我们一直致力于为广大开发者提供更多的优质技术文档和辅助开发工具！</p>
+                </div>
+                <div class="col-md-6  col-lg-6">
+                    <div class="row about">
+                        <div class="col-sm-3">
+                            <h4>关于</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="/about/">关于我们</a></li>
+                                <li><a href="/ad/">广告合作</a></li>
+                                <li><a href="/links/">友情链接</a></li>
+                                <li><a href="/hr/">招聘</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <h4>联系方式</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="https://weibo.com/bootcss" title="Bootstrap中文网官方微博" target="_blank">新浪微博</a></li>
+                                <li><a href="mailto:admin@bootcss.com">电子邮件</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <h4>旗下网站</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="https://www.bootcdn.cn/" target="_blank">BootCDN</a></li>
+                                <li><a href="https://pkg.phpcomposer.com/" target="_blank">Packagist中国镜像</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <h4>特别致谢</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="https://www.maoyuncloud.com/" target="_blank">猫云</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <hr/>
+            <div class="row footer-bottom">
+                <ul class="list-inline text-center">
+                    <li><a href="http://www.beian.miit.gov.cn/" target="_blank">京ICP备11008151号-6</a></li>
+                    <li>京公网安备11010802014853</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="penguin">
+        <div class="penguin-bottom">
+            <div class="right-hand"></div>
+            <div class="left-hand"></div>
+            <div class="right-feet"></div>
+            <div class="left-feet"></div>
+        </div>
+        <div class="penguin-top">
+            <div class="right-cheek"></div>
+            <div class="left-cheek"></div>
+            <div class="belly"></div>
+            <div class="right-eye">
+                <div class="sparkle"></div>
+            </div>
+            <div class="left-eye">
+                <div class="sparkle"></div>
+            </div>
+            <div class="blush-right"></div>
+            <div class="blush-left"></div>
+            <div class="beak-top"></div>
+            <div class="beak-bottom"></div>
+        </div>
+    </div>
+    <div class="mask_bg"></div>
+    <div class="mask"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
